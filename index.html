@@ -1,0 +1,11 @@
+    <script>
+        // Check if the user has visited the site before
+        if(localStorage.getItem('visitedBefore')) {
+            // If visited before, redirect to Dashboard.html
+            window.location.href = 'Login.html';
+        } else {
+            // If not visited before, set the flag and redirect to Welcome.html
+            localStorage.setItem('visitedBefore', true);
+            window.location.href = 'Welcome.html';
+        }
+    </script>
