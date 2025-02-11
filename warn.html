@@ -26,12 +26,47 @@
 
 
         .timer {
-            font-size: 10px;
+            font-size: 15px;
             font-weight: bold;
             margin: 15px 0;
             color: dodgerblue;
         }
     </style>
+
+       <script>document.addEventListener("contextmenu", function (event) {
+        event.preventDefault(); // Disable right-click menu
+    });
+    
+    document.addEventListener("copy", function (event) {
+        event.preventDefault(); // Disable text copying
+    });
+    
+    document.addEventListener("keydown", function (event) {
+        if (
+            (event.ctrlKey && event.key === "c") ||  // Ctrl + C
+            (event.ctrlKey && event.key === "u") ||  // Ctrl + U (View Source)
+            (event.ctrlKey && event.key === "x") ||  // Ctrl + X (Cut)
+            (event.ctrlKey && event.key === "s") ||  // Ctrl + S (Save Page)
+            (event.ctrlKey && event.key === "p") ||  // Ctrl + P (Print)
+            (event.key === "F12") // Developer Tools
+        ) {
+            event.preventDefault();
+        }
+    });
+    </script>
+    <style>/* Disable text selection */
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        /* Hide elements from copying */
+        .no-copy {
+            pointer-events: none;
+        }
+        </style>
 </head>
 <body>
     <div class="container">
