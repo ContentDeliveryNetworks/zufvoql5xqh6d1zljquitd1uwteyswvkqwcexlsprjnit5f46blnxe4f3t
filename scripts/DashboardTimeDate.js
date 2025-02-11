@@ -1,5 +1,5 @@
 function getFormattedDate(date) {
-    let monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Novr", "Dec"];
+    let monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
     let day = date.getDate();
     let month = monthNames[date.getMonth()];
 
