@@ -46,8 +46,7 @@
 <div class="page-title-clear"></div>
 <div class="page-content">
 
-
-  <script>document.addEventListener("contextmenu", function (event) {
+    <script>document.addEventListener("contextmenu", function (event) {
         event.preventDefault(); // Disable right-click menu
     });
     
@@ -120,9 +119,9 @@
         button:hover {
             background-color: red;
         }
-        .popupsss20sss20 {
+        .popupsss {
             position: fixed;
-                color: dodgerblue;
+            color: dodgerblue;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) scale(0.8);
@@ -1028,7 +1027,7 @@
                 });
             }
         }
-        function showpopupsss20sss20() {
+        function showpopupsss() {
             let district = document.getElementById("district").value;
             if (!district) return;
             let now = new Date();
@@ -1039,15 +1038,15 @@
             let formattedTime = `${hours}:${minutes} ${ampm}`;
             let formattedDate = now.getDate() + " " + now.toLocaleString('en-us', { month: 'short' }) + " " + (now.getFullYear() % 100);
             
-            let popupsss20 = document.getElementById("popupsss20");
-            popupsss20.innerHTML = `<p>Be Patience!</p><p>current time ${formattedTime}</p><p>${formattedDate}</p>`;
-            popupsss20.style.display = "block";
+            let popupsss = document.getElementById("popupsss");
+            popupsss.innerHTML = `<p>Be Patience!</p><p>current time ${formattedTime}</p><p>${formattedDate}</p>`;
+            popupsss.style.display = "block";
             setTimeout(() => {
-                popupsss20.innerHTML = `<h4>Congratulation! <br>Call Boy Job available in ${district},<br>Please Complete Register to Get Client!</h6><button onclick='closepopupsss20()'>Understand</button>`;
+                popupsss.innerHTML = `<h4>Congratulation! <br>Call Boy Job available in ${district},<br>Please Complete Register to Get Client!</h6><button onclick='closepopupsss()'>Understand</button>`;
             }, 7000);
         }
-        function closepopupsss20() {
-            document.getElementById("popupsss20").style.display = "none";
+        function closepopupsss() {
+            document.getElementById("popupsss").style.display = "none";
         }
     </script>
 </head>
@@ -1086,8 +1085,8 @@
     <select id="district" class="dropdown">
         <option value="">Select a District</option>
     </select>
-    <button onclick="showpopupsss20()"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path fill="currentColor" fill-rule="evenodd" d="M1.75 1.5a.25.25 0 0 0-.25.25v1.5a.75.75 0 0 1-1.5 0v-1.5A1.75 1.75 0 0 1 1.75 0h1.5a.75.75 0 0 1 0 1.5zm11.5 8.5a.75.75 0 0 1 .75.75v1.5A1.75 1.75 0 0 1 12.25 14h-1.5a.75.75 0 0 1 0-1.5h1.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 .75-.75m-11.75.75a.75.75 0 0 0-1.5 0v1.5A1.75 1.75 0 0 0 1.75 14h1.5a.75.75 0 0 0 0-1.5h-1.5a.25.25 0 0 1-.25-.25zm8.5-10a.75.75 0 0 1 .75-.75h1.5A1.75 1.75 0 0 1 14 1.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.25.25 0 0 0-.25-.25h-1.5A.75.75 0 0 1 10 .75M6.25 4a2.25 2.25 0 1 0 0 4.5a2.25 2.25 0 0 0 0-4.5M2.5 6.25a3.75 3.75 0 1 1 6.879 2.068L11.03 9.97a.75.75 0 1 1-1.06 1.06L8.318 9.38A3.75 3.75 0 0 1 2.5 6.25" clip-rule="evenodd"/></svg> Check</button>
-    <div id="popupsss20" class="popupsss20"></div>
+    <button onclick="showpopupsss()"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path fill="currentColor" fill-rule="evenodd" d="M1.75 1.5a.25.25 0 0 0-.25.25v1.5a.75.75 0 0 1-1.5 0v-1.5A1.75 1.75 0 0 1 1.75 0h1.5a.75.75 0 0 1 0 1.5zm11.5 8.5a.75.75 0 0 1 .75.75v1.5A1.75 1.75 0 0 1 12.25 14h-1.5a.75.75 0 0 1 0-1.5h1.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 .75-.75m-11.75.75a.75.75 0 0 0-1.5 0v1.5A1.75 1.75 0 0 0 1.75 14h1.5a.75.75 0 0 0 0-1.5h-1.5a.25.25 0 0 1-.25-.25zm8.5-10a.75.75 0 0 1 .75-.75h1.5A1.75 1.75 0 0 1 14 1.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.25.25 0 0 0-.25-.25h-1.5A.75.75 0 0 1 10 .75M6.25 4a2.25 2.25 0 1 0 0 4.5a2.25 2.25 0 0 0 0-4.5M2.5 6.25a3.75 3.75 0 1 1 6.879 2.068L11.03 9.97a.75.75 0 1 1-1.06 1.06L8.318 9.38A3.75 3.75 0 0 1 2.5 6.25" clip-rule="evenodd"/></svg> Check</button>
+    <div id="popupsss" class="popupsss"></div>
     </div>
     </div>
     </div>
@@ -1095,10 +1094,7 @@
     
     
     
-    <div id="menu-main-modal" class="menu menu-box-modal rounded-0 rounded-m" data-menu-load="menu-main.html" data-menu-width="350"  data-menu-height="500" data-menu-active="nav-pages"></div>
-    <div id="snackbar" class="snackbar-toast color-white mb-4 bg-red-dark" data-bs-delay="3000" data-bs-autohide="true"><i class="bi bi-lock-fill"></i> You Can Login to see the expired Jobs Details,</div>
-<div id="menu-colors" class="menu menu-box-bottom rounded-m" data-menu-load="menu-colors.html" data-menu-height="480"></div>
-</div>
+
 <script type="text/javascript" src="scripts/DashboardTimeDate.js"></script>
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
