@@ -29,11 +29,24 @@
         <meta name="theme-color" content="#ffffff">
 </head>
     
-<body class="theme-light">
+<body class="theme-dark">
   <div id="preloader"><div class="spinner-border color-highlight" role="status"></div></div>
   <div id="page">
     
-
+ <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add("theme-dark");
+        });
+    </script>
 
 
     <div id="footer-bar" class="footer-bar-2">
@@ -1094,7 +1107,10 @@
     
     
     
-
+    <div id="menu-main-modal" class="menu menu-box-modal rounded-0 rounded-m" data-menu-load="menu-main.html" data-menu-width="350"  data-menu-height="500" data-menu-active="nav-pages"></div>
+    <div id="snackbar" class="snackbar-toast color-white mb-4 bg-red-dark" data-bs-delay="3000" data-bs-autohide="true"><i class="bi bi-lock-fill"></i> You Can Login to see the expired Jobs Details,</div>
+<div id="menu-colors" class="menu menu-box-bottom rounded-m" data-menu-load="menu-colors.html" data-menu-height="480"></div>
+</div>
 <script type="text/javascript" src="scripts/DashboardTimeDate.js"></script>
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
