@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
 <title>Client Demo Client Profile name</title>
 <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="scripts/Photo.css">
 <link href="../../cdn.jsdelivr.net/npm/bootstrap-icons%401.8.1/font/bootstrap-icons.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="styles/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
@@ -78,37 +79,6 @@
                 </div>
 
                 <div class="divider mb-4 mt-3"></div>
-  <div class="row text-center row-cols-3 mb-n1">
-        <a class="col mb-4" href="WOMAN.jpg">
-            <img src="WOMAN.jpg" class="img-fluid rounded-xs" alt="img">
-        </a>
-        <a class="col mb-4" href="WOMAN.jpg">
-            <img src="WOMAN.jpg" class="img-fluid rounded-xs" alt="img">
-        </a>
-        <a class="col mb-4" href="WOMAN.jpg">
-            <img src="WOMAN.jpg" class="img-fluid rounded-xs" alt="img">
-        </a>
-        <a class="col mb-4" href="WOMAN.jpg">
-            <img src="WOMAN.jpg" class="img-fluid rounded-xs" alt="img">
-        </a>
-        <a class="col mb-4" href="WOMAN.jpg">
-            <img src="WOMAN.jpg" class="img-fluid rounded-xs" alt="img">
-        </a>
-        <a class="col mb-4" href="WOMAN.jpg">
-            <img src="WOMAN.jpg" class="img-fluid rounded-xs" alt="img">
-        </a>
-    </div>
-
-    <!-- iOS-style notification -->
-    <div class="notification" id="loginNotification">
-        <div class="notification-content">
-            <h3 class="notification-title">oh</h3>
-            <p class="notification-message">Please Register First or Login, Thank you for understand</p>
-            <div class="notification-buttons">
-                <button class="close-btn">Close</button>
-            </div>
-        </div>
-    </div>
                 <div class="row mb-0 pb-4">
                     <div class="col-6">
                         <a href="#" data-toast="ErrorX" class="bi bi-check2-circle btn btn-m btn-full rounded-s bg-highlight font-13 font-600"> Accept Job</a><br>
@@ -122,122 +92,53 @@
                     
                     </div>
                 </div>
+
+
+                          <div class="divider mb-4"></div>
                 
+                <p class="color-highlight font-600 mb-n1 font-12">Demo Client</p>
+                <h4>Recent Photos</h4>
+                        <div class="photo-grid">
+        <div class="photo-item">
+            <img src="WOMAN.jpg" alt="Photo 1" class="grid-image">
+        </div>
+        <div class="photo-item">
+            <img src="WOMAN.jpg" alt="Photo 2" class="grid-image">
+        </div>
+        <div class="photo-item">
+            <img src="WOMAN.jpg" alt="Photo 3" class="grid-image">
+        </div>
+        <div class="photo-item">
+            <img src="WOMAN.jpg" alt="Photo 4" class="grid-image">
+        </div>
+        <div class="photo-item">
+            <img src="WOMAN.jpg" alt="Photo 5" class="grid-image">
+        </div>
+        <div class="photo-item">
+            <img src="WOMAN.jpg" alt="Photo 6" class="grid-image">
+        </div>
+        <div class="photo-item">
+            <img src="WOMAN.jpg" alt="Photo 7" class="grid-image">
+        </div>
+        <div class="photo-item">
+            <img src="WOMAN.jpg" alt="Photo 8" class="grid-image">
+        </div>
+        <div class="photo-item">
+            <img src="WOMAN.jpg" alt="Photo 9" class="grid-image">
+        </div>
+    </div>
 
-    <script>// Wait for the DOM to be fully loaded
-    document.addEventListener('DOMContentLoaded', function() {
-        console.log('Website loaded successfully!');
-        
-        // Example of adding an event listener
-        const heading = document.querySelector('h1');
-        if (heading) {
-            heading.addEventListener('click', function() {
-                alert('Welcome to the website!');
-            });
-        }
-    
-        const notification = document.getElementById('loginNotification');
-        const closeBtn = notification.querySelector('.close-btn');
-        const galleryLinks = document.querySelectorAll('.col');
-    
-        // Handle photo clicks
-        galleryLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault(); // Prevent default link behavior
-                showNotification();
-            });
-        });
-    
-        // Show notification
-        function showNotification() {
-            notification.classList.add('show');
-        }
-    
-        // Hide notification
-        function hideNotification() {
-            notification.classList.remove('show');
-        }
-    
-        // Close button click handler
-        closeBtn.addEventListener('click', hideNotification);
-    
-        // Close notification when clicking outside
-        document.addEventListener('click', function(e) {
-            if (e.target !== notification && 
-                !notification.contains(e.target) && 
-                !Array.from(galleryLinks).some(link => link.contains(e.target))) {
-                hideNotification();
-            }
-        });
-    }); </script>
+    <!-- iOS-style notification -->
+    <div class="notification" id="loginNotification">
+        <div class="notification-content">
+            <h3 class="notification-title">oh</h3>
+            <p class="notification-message">Please Register First or Login, Thank you for understand</p>
+            <div class="notification-buttons">
+                <button class="close-btn">Close</button>
+            </div>
+        </div>
+    </div>
 
-        
-<style>
-    .notification {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(0.9);
-        background: rgba(255, 255, 255, 0.95);
-        width: 270px;
-        border-radius: 13px;
-        z-index: 1000;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.2s ease;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-    
-    .notification.show {
-        opacity: 1;
-        visibility: visible;
-        transform: translate(-50%, -50%) scale(1);
-    }
-    
-    .notification-content {
-        padding: 0;
-        text-align: center;
-    }
-    
-    .notification-title {
-        margin: 0;
-        padding: 20px 16px 8px;
-        font-size: 17px;
-        font-weight: 600;
-        color: #000;
-    }
-    
-    .notification-message {
-        margin: 0;
-        padding: 0 16px 20px;
-        font-size: 13px;
-        color: #000;
-        line-height: 1.4;
-        border-bottom: 0.5px solid rgba(0, 0, 0, 0.15);
-    }
-    
-    .notification-buttons {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .close-btn {
-        background: none;
-        border: none;
-        color: #007AFF;
-        font-size: 17px;
-        font-weight: 400;
-        padding: 12px 0;
-        margin: 0;
-        cursor: pointer;
-        font-family: inherit;
-        width: 100%;
-        transition: background-color 0.2s;
-    }
-    
-    .close-btn:active {
-        background-color: rgba(0, 0, 0, 0.1);
-    } </style>
 
         <script>
             function myFunction() {
@@ -259,7 +160,8 @@
     
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://himancallboyapp.neocities.org/HIMANApp/custom.js"></script>
+          <script src="https://himancallboyapp.neocities.org/HIMANApp/custom.js"></script>
+        <script src="scripts/Photo.js"></script>
 <script type="text/javascript" src="scripts/DashboardTimeDate.js"></script>
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 </body>
