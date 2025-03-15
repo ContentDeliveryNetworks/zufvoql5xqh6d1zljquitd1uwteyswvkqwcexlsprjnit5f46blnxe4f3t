@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ckin — Custom HTML5 Video Player</title>
+    <link rel="stylesheet" href="dist/css/ckin.css">
+    <link rel="stylesheet" href="demoDist/demo.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #000;
+        }
+
+        .video-container {
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .close-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: red;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="video-container">
+        <video poster="ckin.jpg"
+            src="http://zufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/video.mp4"
+            data-ckin="compact" data-overlay="2" controls>
+        </video>
+    </div>
+
+    <button class="close-btn" onclick="closePage()">Close Page</button>
+
+    <script src="dist/js/ckin.js"></script>
+    <script>
+        function closePage() {
+            window.location.href = "https://abc.com"; // Redirects back to abc.com
+        }
+    </script>
+
+</body>
+
+</html>
