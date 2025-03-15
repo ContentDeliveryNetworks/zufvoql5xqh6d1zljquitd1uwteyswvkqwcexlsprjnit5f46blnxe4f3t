@@ -1,67 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tuitorials</title>
-    <link rel="stylesheet" href="dist/css/ckin.css">
-    <link rel="stylesheet" href="demoDist/demo.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            background-color: #000;
-        }
-
-        .video-container {
-            width: 80%;
-            max-width: 600px;
-            position: relative;
-        }
-
-        video {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .close-btn {
-            margin-top: 15px;
-            padding: 10px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            color: white;
-            background-color: red;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .close-btn:hover {
-            background-color: darkred;
-        }
-    </style>
-</head>
-
+<html>
 <body>
 
-    <div class="video-container">
-        <video poster="http://zufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/Tuitorial.PNG"
-            src="http://zufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/video.mp4"
-            data-ckin="compact" data-overlay="2" controls>
-        </video>
-    </div>
+<h1>The video controls attribute</h1>
 
+<video width="320" height="240" controls>
+  <source src="http://zufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/video.mp4" type="video/mp4">
 
-    <script src="dist/js/ckin.js"></script>
-
+  Your browser does not support the video tag.
+</video>
 
 </body>
-
 </html>
