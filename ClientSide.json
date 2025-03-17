@@ -6,7 +6,7 @@
             "type": "penalty"
         },
         {
-            "username": "demo",
+            "username": "test77",
             "password": "demo123",
             "type": "redirect",
             "redirectUrl": "https://example.com/demo"
