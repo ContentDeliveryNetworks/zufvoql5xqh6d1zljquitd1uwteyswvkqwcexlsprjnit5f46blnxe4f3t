@@ -15,6 +15,33 @@
             "username": "blocked",
             "password": "block123",
             "type": "blocked"
+        },
+        {
+            "username": "user1",
+            "password": "pass1",
+            "type": "penalty"
+        },
+        {
+            "username": "user2",
+            "password": "pass2",
+            "type": "redirect",
+            "redirectUrl": "https://example.com/page1"
+        },
+        {
+            "username": "user3",
+            "password": "pass3",
+            "type": "blocked"
+        },
+        {
+            "username": "admin",
+            "password": "adminpass",
+            "type": "redirect",
+            "redirectUrl": "https://example.com/admin"
+        },
+        {
+            "username": "guest",
+            "password": "guestpass",
+            "type": "penalty"
         }
     ]
 }
