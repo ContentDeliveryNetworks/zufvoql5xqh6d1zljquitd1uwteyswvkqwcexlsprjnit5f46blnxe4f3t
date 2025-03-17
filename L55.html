@@ -419,7 +419,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         break;
                     case 'redirect':
                         if (user.redirectUrl) {
-                            window.location.href = user.redirectUrl;
+                            showModal('success');
+                            setTimeout(function() {
+                                window.location.href = user.redirectUrl;
+                            }, 3000);
                         }
                         break;
                     case 'blocked':
@@ -471,11 +474,13 @@ document.addEventListener('DOMContentLoaded', function() {
     <h2 class="text-center color-blue-light">Restricted<br> Please Pay<br> Penalty Then<br>    Login! <br></h2>
 </div>
 
-<div class="fullscreen-loader">
-    <div class="loader-content">
-        <div class="loader-spinner"></div>
-        <div class="loader-text">Connecting Server...</div>
-    </div>
+<div id="success" 
+    class="menu menu-box-modal rounded-xl" 
+    data-menu-hide="1500"
+    data-menu-width="170"
+    data-menu-height="auto">
+    <h1 class="text-center fa-4x mt-2 pt-3 pb-2"><i class="fa fa-check-circle color-green-dark"></i></h1>
+    <h2 class="text-center color-green-dark">Success!<br>Redirecting...</h2>
 </div>
 
 <div id="empty" 
@@ -494,6 +499,13 @@ document.addEventListener('DOMContentLoaded', function() {
     data-menu-height="auto">
     <h1 class="text-center fa-4x mt-2 pt-3 pb-2"><i class="fa fa-ban color-red-dark"></i></h1>
     <h2 class="text-center color-red-dark">Account<br>Blocked!</h2>
+</div>
+
+<div class="fullscreen-loader">
+    <div class="loader-content">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">Connecting Server...</div>
+    </div>
 </div>
 
 </body>
