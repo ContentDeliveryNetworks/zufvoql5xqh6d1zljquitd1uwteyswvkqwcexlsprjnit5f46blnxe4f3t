@@ -1,1 +1,20 @@
-test
+{
+    "users": [
+        {
+            "username": "x",
+            "password": "x",
+            "type": "penalty"
+        },
+        {
+            "username": "demo",
+            "password": "demo123",
+            "type": "redirect",
+            "redirectUrl": "https://example.com/demo"
+        },
+        {
+            "username": "blocked",
+            "password": "block123",
+            "type": "blocked"
+        }
+    ]
+}
