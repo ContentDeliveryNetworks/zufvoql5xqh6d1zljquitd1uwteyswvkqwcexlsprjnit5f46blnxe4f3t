@@ -365,7 +365,7 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             fetchStartTime = performance.now();
             updateLoaderText('Connecting Server...');
-            const response = await fetch('https://zufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/ClientSide.json');
+            const response = await fetch('https://syncjson.pages.dev/Logincredentials.json');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
