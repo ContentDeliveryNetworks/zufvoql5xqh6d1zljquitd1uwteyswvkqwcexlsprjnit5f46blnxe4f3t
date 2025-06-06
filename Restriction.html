@@ -1,0 +1,353 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+ <title>Login</title>
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8BQG8QYQJM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8BQG8QYQJM');
+</script>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <link rel="stylesheet" type="text/css" href="/LeScript/Loading.css">
+<script src="LeScript/loading.js"></script>
+
+<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/LeScript/Block.css">
+<script src="LeScript/Block.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css"> 
+<script src="../../code.jquery.com/jquery-3.6.0.min.js"></script>   
+<link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+        <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
+        <link rel="manifest" href="../icons/site.webmanifest">
+        <link rel="mask-icon" href="../icons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="../icons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#2d89ef">
+        <meta name="msapplication-config" content="https://zufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/icons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+</head>
+    
+<body class="theme-dark">
+    
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <div class="ex"></div> 
+    </div>
+    
+  <div id="page">
+    
+
+
+
+    <div id="footer-bar" class="footer-bar-2">
+                <a href="https://zufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/Package" class="circle-nav"><i class="bi bi-arrow-left-circle-fill"></i><span>Back</span></a>
+                <a href="#" data-toggle-theme><i class="bi bi-lightbulb"></i><span>DayNight</span></a>
+       <a href="#" data-menu="menu-main-modal"><i class="bi bi-list"></i><span>Menu</span></a>
+    </div>
+    
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
+      padding: 20px;
+
+    }
+
+    .container {
+      max-width: 100%;
+      margin: auto;
+    }
+
+    select {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #007aff;
+      border-radius: 12px;
+      font-size: 16px;
+      appearance: none;
+      background-color: #f0f4ff;
+      color: #007aff;
+      font-weight: bold;
+      text-align-last: center;
+    }
+
+    select:focus {
+      outline: none;
+      border-color: #0051d4;
+    }
+
+    option {
+      color: #222;
+      background-color: #fff;
+    }
+
+    option:checked {
+      background-color: #007aff;
+      color: #fff;
+    }
+
+    .lang-content {
+      margin-top: 20px;
+    }
+
+    .font-2 {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .color-green-dark {
+      color: #006400;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      select {
+        font-size: 14px;
+        padding: 12px;
+      }
+
+      .font-2 {
+        font-size: 15px;
+      }
+    }
+  </style>
+        <div class="card card-style">
+
+            <div class="content">
+                <p class="font-600 color-highlight mb-n1"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24">
+	<path fill="currentColor" d="M17 14c-.24-.24-.44-.5-.65-.75C17.5 11.5 19 8.56 19 5c0-1.95-.74-3-2-3c-1.54 0-3.96 2.06-5 5.97C10.96 4.06 8.54 2 7 2C5.74 2 5 3.05 5 5c0 3.56 1.5 6.5 2.65 8.25c-.21.25-.41.51-.65.75c-.25.25-2 1.39-2 3.5C5 20 7 22 9.5 22c1.5 0 2.5-.5 2.5-.5s1 .5 2.5.5c2.5 0 4.5-2 4.5-4.5c0-2.11-1.75-3.25-2-3.5m-.12-9.97c.06.17.12.47.12.97c0 2.84-1.11 5.24-2.07 6.78c-.38-.28-.83-.48-1.4-.62c.24-4.52 2.44-6.83 3.35-7.13M7 5c0-.5.06-.8.12-.97c.91.3 3.11 2.61 3.38 7.13c-.6.14-1.05.34-1.42.62C8.11 10.24 7 7.84 7 5m7.5 15c-1 0-1.8-.33-2.22-.56c.42-.18.72-.71.72-.94c0-.28-.45-.5-1-.5s-1 .22-1 .5c0 .23.3.76.72.94c-.42.23-1.22.56-2.22.56A2.5 2.5 0 0 1 7 17.5c0-.7.43-1.24 1-1.73c.44-.36.61-.52 1.3-1.37c.76-.95 1.09-1.4 2.7-1.4s1.94.45 2.7 1.4c.69.85.86 1.01 1.3 1.37c.57.49 1 1.03 1 1.73a2.5 2.5 0 0 1-2.5 2.5m-.5-4c0 .41-.22.75-.5.75s-.5-.34-.5-.75s.22-.75.5-.75s.5.34.5.75m-3 0c0 .41-.22.75-.5.75s-.5-.34-.5-.75s.22-.75.5-.75s.5.34.5.75" />
+</svg>Welcome to the new world of call boys!</p><br>
+                <h6 class="font-2 color-red-dark"><i class="bi bi-exclamation-circle-fill"></i> Please Read Before Registration!</h6>         <div class="divider"></div>
+       
+  <div class="container">
+    <select id="languageSelect">
+      <option value="en" selected>Change Language</option>
+      <option value="hi">Hindi</option>
+      <option value="te">Telugu</option>
+      <option value="mr">Marathi</option>
+      <option value="ta">Tamil</option>
+      <option value="ur">Urdu</option>
+      <option value="gu">Gujarati</option>
+      <option value="bn">Bengali</option>
+      <option value="or">Odia</option>
+      <option value="kn">Kannada</option>
+      <option value="ml">Malayalam</option>
+      <option value="as">Assamese</option>
+      <option value="pa">Punjabi</option>
+    </select>
+
+    <div id="en" class="lang-content">
+      <p class="font-bold color-blue-dark">
+ We are very happy to see you joining us! <br>
+Before you start,<br>
+You will first need to pay a registration fee.<br> Make sure that you have sufficient funds ready in your mobile wallet<br> — such as PhonePe, Google Pay, Paytm, UPI, or others.<br>
+On the first page of registration, you will see the company account number, make the payment there<br> and go to the next page. <br> You will be asked to upload a clear screenshot to prove that you have made the payment to the company account<br>
+Upload a screenshot of the company account where your registration fee payment has been completed <br>
+Once your payment is confirmed,<br> you will be automatically taken to the next page to complete the rest of your registration with your details.
+    </div>
+
+    <div id="hi" class="lang-content hidden"><p class="font-2 color-blue-dark">हमें आपको हमारे साथ जुड़ते देखकर बहुत खुशी हुई! <br>
+शुरू करने से पहले,<br>
+आपको सबसे पहले पंजीकरण शुल्क का भुगतान करना होगा।<br> सुनिश्चित करें कि आपके मोबाइल वॉलेट में पर्याप्त धनराशि तैयार है<br> — जैसे कि PhonePe, Google Pay, Paytm, UPI, या अन्य।<br>
+पंजीकरण के पहले पृष्ठ पर, आपको कंपनी खाता संख्या दिखाई देगी, वहाँ भुगतान करें<br> और अगले पृष्ठ पर जाएँ। <br> आपको यह साबित करने के लिए एक स्पष्ट स्क्रीनशॉट अपलोड करने के लिए कहा जाएगा कि आपने कंपनी खाते में भुगतान किया है<br>
+कंपनी खाते का स्क्रीनशॉट अपलोड करें जहाँ आपका पंजीकरण शुल्क भुगतान पूरा हो गया है <br>
+एक बार जब आपका भुगतान पुष्टि हो जाता है,<br> तो आपको अपने विवरण के साथ अपने पंजीकरण के बाकी हिस्सों को पूरा करने के लिए स्वचालित रूप से अगले पृष्ठ पर ले जाया जाएगा।</p></div>
+    <div id="te" class="lang-content hidden"><p class="font-2 color-blue-dark">మీరు మాతో చేరడం చూసి మేము చాలా సంతోషంగా ఉన్నాము! <br>
+మీరు ప్రారంభించడానికి ముందు,<br>
+మీరు ముందుగా రిజిస్ట్రేషన్ ఫీజు చెల్లించాలి.<br> మీ మొబైల్ వాలెట్‌లో తగినంత నిధులు సిద్ధంగా ఉన్నాయని నిర్ధారించుకోండి<br> — PhonePe, Google Pay, Paytm, UPI లేదా ఇతరులు వంటివి.<br>
+
+రిజిస్ట్రేషన్ యొక్క మొదటి పేజీలో, మీరు కంపెనీ ఖాతా నంబర్‌ను చూస్తారు, అక్కడ చెల్లింపు చేస్తారు<br> మరియు తదుపరి పేజీకి వెళ్లండి. <br> మీరు కంపెనీ ఖాతాకు చెల్లింపు చేశారని నిరూపించడానికి స్పష్టమైన స్క్రీన్‌షాట్‌ను అప్‌లోడ్ చేయమని మిమ్మల్ని అడుగుతారు<br>
+
+మీ రిజిస్ట్రేషన్ ఫీజు చెల్లింపు పూర్తయిన కంపెనీ ఖాతా యొక్క స్క్రీన్‌షాట్‌ను అప్‌లోడ్ చేయండి <br>
+
+మీ చెల్లింపు నిర్ధారించబడిన తర్వాత,<br> మీ వివరాలతో మీ మిగిలిన రిజిస్ట్రేషన్‌ను పూర్తి చేయడానికి మీరు స్వయంచాలకంగా తదుపరి పేజీకి తీసుకెళ్లబడతారు.</p></div>
+    <div id="mr" class="lang-content hidden"><p class="font-2 color-blue-dark">तुम्हाला आमच्यात सामील होताना पाहून आम्हाला खूप आनंद होत आहे! <br>
+तुम्ही सुरुवात करण्यापूर्वी, <br>
+तुम्हाला प्रथम नोंदणी शुल्क भरावे लागेल.<br> तुमच्या मोबाईल वॉलेटमध्ये पुरेसे पैसे तयार आहेत याची खात्री करा<br> — जसे की फोनपे, गुगल पे, पेटीएम, यूपीआय किंवा इतर.<br>
+नोंदणीच्या पहिल्या पानावर, तुम्हाला कंपनीचा खाते क्रमांक दिसेल, तेथे पेमेंट करा<br> आणि पुढील पानावर जा. <br> तुम्ही कंपनीच्या खात्यात पेमेंट केले आहे हे सिद्ध करण्यासाठी तुम्हाला एक स्पष्ट स्क्रीनशॉट अपलोड करण्यास सांगितले जाईल<br>
+तुमची नोंदणी शुल्क भरण्याची प्रक्रिया पूर्ण झालेल्या कंपनीच्या खात्याचा स्क्रीनशॉट अपलोड करा<br>
+तुमचे पेमेंट कन्फर्म झाल्यावर,<br> तुम्हाला तुमच्या तपशीलांसह तुमची उर्वरित नोंदणी पूर्ण करण्यासाठी पुढील पानावर आपोआप नेले जाईल.</p></div>
+    <div id="ta" class="lang-content hidden"><p class="font-2 color-blue-dark">நீங்கள் எங்களுடன் இணைவதைக் கண்டு நாங்கள் மிகவும் மகிழ்ச்சியடைகிறோம்! <br>
+நீங்கள் தொடங்குவதற்கு முன்,<br>
+முதலில் நீங்கள் பதிவுக் கட்டணத்தைச் செலுத்த வேண்டும்.<br> உங்கள் மொபைல் பணப்பையில் போதுமான நிதி தயாராக இருப்பதை உறுதிசெய்து கொள்ளுங்கள்<br> — PhonePe, Google Pay, Paytm, UPI அல்லது பிற.<br>
+
+பதிவின் முதல் பக்கத்தில், நீங்கள் நிறுவனத்தின் கணக்கு எண்ணைக் காண்பீர்கள், அங்கு பணம் செலுத்துவீர்கள்<br> அடுத்த பக்கத்திற்குச் செல்லவும். <br> நீங்கள் நிறுவனக் கணக்கில் பணம் செலுத்தியுள்ளீர்கள் என்பதை நிரூபிக்க ஒரு தெளிவான ஸ்கிரீன்ஷாட்டைப் பதிவேற்றுமாறு கேட்கப்படுவீர்கள்<br>
+
+உங்கள் பதிவுக் கட்டணம் செலுத்தப்பட்ட நிறுவனக் கணக்கின் ஸ்கிரீன்ஷாட்டைப் பதிவேற்றுங்கள் <br>
+
+உங்கள் பணம் செலுத்துதல் உறுதிசெய்யப்பட்டதும்,<br> உங்கள் விவரங்களுடன் மீதமுள்ள பதிவை முடிக்க அடுத்த பக்கத்திற்கு தானாகவே அழைத்துச் செல்லப்படுவீர்கள்.</p></div>
+    <div id="ur" class="lang-content hidden"><p class="font-2 color-blue-dark">آپ کو ہمارے ساتھ شامل ہوتے دیکھ کر ہمیں بہت خوشی ہوئی! <br>
+شروع کرنے سے پہلے،<br>
+آپ کو پہلے رجسٹریشن فیس ادا کرنے کی ضرورت ہوگی۔<br> یقینی بنائیں کہ آپ کے موبائل والیٹ میں کافی فنڈز موجود ہیں<br> — جیسے PhonePe، Google Pay، Paytm، UPI، یا دیگر۔<br>
+رجسٹریشن کے پہلے صفحہ پر، آپ کو کمپنی کا اکاؤنٹ نمبر نظر آئے گا، وہاں ادائیگی کریں<br> اور اگلے صفحہ پر جائیں۔ <br> آپ سے یہ ثابت کرنے کے لیے ایک واضح اسکرین شاٹ اپ لوڈ کرنے کو کہا جائے گا کہ آپ نے کمپنی اکاؤنٹ میں ادائیگی کی ہے<br>
+کمپنی کے اکاؤنٹ کا اسکرین شاٹ اپ لوڈ کریں جہاں آپ کی رجسٹریشن فیس کی ادائیگی مکمل ہو چکی ہے <br>
+ایک بار جب آپ کی ادائیگی کی تصدیق ہو جاتی ہے،<br> آپ کو اپنی تفصیلات کے ساتھ باقی رجسٹریشن مکمل کرنے کے لیے خود بخود اگلے صفحے پر لے جایا جائے گا۔</p></div>
+    <div id="gu" class="lang-content hidden"><p class="font-2 color-blue-dark">અમને તમને અમારી સાથે જોડાતા જોઈને ખૂબ આનંદ થયો! <br>
+તમે શરૂઆત કરો તે પહેલાં, <br>
+તમારે પહેલા નોંધણી ફી ચૂકવવાની રહેશે.<br> ખાતરી કરો કે તમારી પાસે તમારા મોબાઇલ વોલેટમાં પૂરતા ભંડોળ તૈયાર છે<br> — જેમ કે PhonePe, Google Pay, Paytm, UPI, અથવા અન્ય.<br>
+નોંધણીના પહેલા પૃષ્ઠ પર, તમને કંપનીનો એકાઉન્ટ નંબર દેખાશે, ત્યાં ચુકવણી કરો<br> અને આગલા પૃષ્ઠ પર જાઓ. <br> તમને કંપનીના એકાઉન્ટમાં ચુકવણી કરી છે તે સાબિત કરવા માટે સ્પષ્ટ સ્ક્રીનશોટ અપલોડ કરવાનું કહેવામાં આવશે<br>
+કંપનીના એકાઉન્ટનો સ્ક્રીનશોટ અપલોડ કરો જ્યાં તમારી નોંધણી ફી ચુકવણી પૂર્ણ થઈ ગઈ છે <br>
+એકવાર તમારી ચુકવણી પુષ્ટિ થઈ જાય,<br> તમને તમારી વિગતો સાથે બાકીની નોંધણી પૂર્ણ કરવા માટે આપમેળે આગલા પૃષ્ઠ પર લઈ જવામાં આવશે.</p></div>
+    <div id="bn" class="lang-content hidden"><p class="font-2 color-blue-dark">আপনি আমাদের সাথে যোগ দিচ্ছেন দেখে আমরা খুবই আনন্দিত! <br>
+শুরু করার আগে,<br>
+আপনাকে প্রথমে একটি নিবন্ধন ফি প্র্রদান করতে হবে।<br> নিশ্চিত করুন যে আপনার মোবাইল ওয়ালেটে পর্যাপ্ত অর্থ প্রস্তুত আছে<br> — যেমন PhonePe, Google Pay, Paytm, UPI, অথবা অন্যান্য।<br>
+নিবন্ধনের প্রথম পৃষ্ঠায় আপনি কোম্পানির একাউন্ট নম্বর দেখতে পাবেন সেখানে পেমেন্ট করুন<br> এবং পরবর্তী পৃষ্ঠায় যান <br> আপনি কোম্পানির উক্ত একাউন্ট যে অর্থপ্রদান করেছেন সেটি প্রমান করতে <br> একটি স্পষ্ট স্ক্রিনশট আপলোড করতে বলা হবে<br>
+আপনার নিবন্ধন ফী  পেমেন্ট সম্পন্ন হয়েছে কোম্পানির একাউন্ট সেটির স্ক্রিনশট আপলোড করুন <br>
+আপনার অর্থপ্রদান নিশ্চিত হয়ে গেলে,<br> আপনার বিবরণ দিয়ে আপনার বাকি নিবন্ধন সম্পূর্ণ করার জন্য <br>আপনাকে স্বয়ংক্রিয়ভাবে পরবর্তী পৃষ্ঠায় নিয়ে যাওয়া হবে।</p></div>
+    <div id="or" class="lang-content hidden"><p class="font-2 color-blue-dark">ଆମ ସହିତ ଯୋଗଦାନ କରି ଆମେ ବହୁତ ଖୁସି! <br>
+ଆପଣ ଆରମ୍ଭ କରିବା ପୂର୍ବରୁ, <br>
+ଆପଣଙ୍କୁ ପ୍ରଥମେ ଏକ ପଞ୍ଜିକରଣ ଫି ଦେବାକୁ ପଡିବ।<br> ନିଶ୍ଚିତ କରନ୍ତୁ ଯେ ଆପଣଙ୍କର ମୋବାଇଲ୍ ୱାଲେଟରେ ପର୍ଯ୍ୟାପ୍ତ ପାଣ୍ଠି ପ୍ରସ୍ତୁତ ଅଛି <br> — ଯେପରିକି PhonePe, Google Pay, Paytm, UPI, କିମ୍ବା ଅନ୍ୟାନ୍ୟ।<br>
+ପଞ୍ଜିକରଣର ପ୍ରଥମ ପୃଷ୍ଠାରେ, ଆପଣ କମ୍ପାନୀ ଆକାଉଣ୍ଟ ନମ୍ବର ଦେଖିବେ, ସେଠାରେ ପେମେଣ୍ଟ କରିବେ <br> ଏବଂ ପରବର୍ତ୍ତୀ ପୃଷ୍ଠାକୁ ଯାଆନ୍ତୁ। <br> ଆପଣ କମ୍ପାନୀ ଆକାଉଣ୍ଟରେ ପେମେଣ୍ଟ କରିଛନ୍ତି ବୋଲି ପ୍ରମାଣ କରିବା ପାଇଁ ଆପଣଙ୍କୁ ଏକ ସ୍ପଷ୍ଟ ସ୍କ୍ରିନସଟ୍ ଅପଲୋଡ୍ କରିବାକୁ କୁହାଯିବ<br>
+ଆପଣଙ୍କ ପଞ୍ଜିକରଣ ଫି ପେମେଣ୍ଟ ସମ୍ପୂର୍ଣ୍ଣ ହୋଇଥିବା କମ୍ପାନୀ ଆକାଉଣ୍ଟର ଏକ ସ୍କ୍ରିନସଟ୍ ଅପଲୋଡ୍ କରନ୍ତୁ <br>
+ଆପଣଙ୍କ ପେମେଣ୍ଟ ନିଶ୍ଚିତ ହେବା ପରେ, <br> ଆପଣଙ୍କୁ ଆପଣଙ୍କର ବିବରଣୀ ସହିତ ଆପଣଙ୍କର ବାକି ପଞ୍ଜିକରଣ ସମାପ୍ତ କରିବା ପାଇଁ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ପରବର୍ତ୍ତୀ ପୃଷ୍ଠାକୁ ନିଆଯିବ।</p></div>
+    <div id="kn" class="lang-content hidden"><p class="font-2 color-blue-dark">ನೀವು ನಮ್ಮೊಂದಿಗೆ ಸೇರುವುದನ್ನು ನೋಡಿ ನಮಗೆ ತುಂಬಾ ಸಂತೋಷವಾಗಿದೆ! <br>
+ನೀವು ಪ್ರಾರಂಭಿಸುವ ಮೊದಲು,<br>
+ನೀವು ಮೊದಲು ನೋಂದಣಿ ಶುಲ್ಕವನ್ನು ಪಾವತಿಸಬೇಕಾಗುತ್ತದೆ.<br> ನಿಮ್ಮ ಮೊಬೈಲ್ ವ್ಯಾಲೆಟ್‌ನಲ್ಲಿ ಸಾಕಷ್ಟು ಹಣ ಸಿದ್ಧವಾಗಿದೆ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ<br> — PhonePe, Google Pay, Paytm, UPI, ಅಥವಾ ಇತರವುಗಳು.<br>
+ನೋಂದಣಿಯ ಮೊದಲ ಪುಟದಲ್ಲಿ, ನೀವು ಕಂಪನಿಯ ಖಾತೆ ಸಂಖ್ಯೆಯನ್ನು ನೋಡುತ್ತೀರಿ, ಅಲ್ಲಿ ಪಾವತಿ ಮಾಡಿ<br> ಮತ್ತು ಮುಂದಿನ ಪುಟಕ್ಕೆ ಹೋಗಿ. <br> ನೀವು ಕಂಪನಿಯ ಖಾತೆಗೆ ಪಾವತಿ ಮಾಡಿದ್ದೀರಿ ಎಂದು ಸಾಬೀತುಪಡಿಸಲು ಸ್ಪಷ್ಟ ಸ್ಕ್ರೀನ್‌ಶಾಟ್ ಅನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಲು ನಿಮ್ಮನ್ನು ಕೇಳಲಾಗುತ್ತದೆ<br>
+ನಿಮ್ಮ ನೋಂದಣಿ ಶುಲ್ಕ ಪಾವತಿ ಪೂರ್ಣಗೊಂಡ ಕಂಪನಿ ಖಾತೆಯ ಸ್ಕ್ರೀನ್‌ಶಾಟ್ ಅನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ <br>
+ನಿಮ್ಮ ಪಾವತಿಯನ್ನು ದೃಢೀಕರಿಸಿದ ನಂತರ,<br> ನಿಮ್ಮ ವಿವರಗಳೊಂದಿಗೆ ನಿಮ್ಮ ಉಳಿದ ನೋಂದಣಿಯನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ನಿಮ್ಮನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಮುಂದಿನ ಪುಟಕ್ಕೆ ಕರೆದೊಯ್ಯಲಾಗುತ್ತದೆ.</p></div>
+    <div id="ml" class="lang-content hidden"><p class="font-2 color-blue-dark">നിങ്ങൾ ഞങ്ങളോടൊപ്പം ചേരുന്നതിൽ ഞങ്ങൾക്ക് വളരെ സന്തോഷമുണ്ട്! <br>
+തുടരുന്നതിന് മുമ്പ്,<br>
+നിങ്ങൾ ആദ്യം ഒരു രജിസ്ട്രേഷൻ ഫീസ് അടയ്ക്കേണ്ടതുണ്ട്.<br> നിങ്ങളുടെ മൊബൈൽ വാലറ്റിൽ മതിയായ ഫണ്ട് തയ്യാറാണെന്ന് ഉറപ്പാക്കുക<br> — PhonePe, Google Pay, Paytm, UPI, അല്ലെങ്കിൽ മറ്റുള്ളവ പോലുള്ളവ.<br>
+രജിസ്ട്രേഷന്റെ ആദ്യ പേജിൽ, നിങ്ങൾ കമ്പനി അക്കൗണ്ട് നമ്പർ കാണും, അവിടെ പേയ്‌മെന്റ് നടത്തുക<br> അടുത്ത പേജിലേക്ക് പോകുക. <br> കമ്പനി അക്കൗണ്ടിലേക്ക് നിങ്ങൾ പേയ്‌മെന്റ് നടത്തിയെന്ന് തെളിയിക്കാൻ വ്യക്തമായ ഒരു സ്‌ക്രീൻഷോട്ട് അപ്‌ലോഡ് ചെയ്യാൻ നിങ്ങളോട് ആവശ്യപ്പെടും<br>
+നിങ്ങളുടെ രജിസ്ട്രേഷൻ ഫീസ് പേയ്‌മെന്റ് പൂർത്തിയായ കമ്പനി അക്കൗണ്ടിന്റെ സ്‌ക്രീൻഷോട്ട് അപ്‌ലോഡ് ചെയ്യുക <br>
+നിങ്ങളുടെ പേയ്‌മെന്റ് സ്ഥിരീകരിച്ചുകഴിഞ്ഞാൽ,<br> നിങ്ങളുടെ വിശദാംശങ്ങൾ ഉപയോഗിച്ച് നിങ്ങളുടെ രജിസ്ട്രേഷന്റെ ബാക്കി ഭാഗങ്ങൾ പൂർത്തിയാക്കാൻ നിങ്ങളെ സ്വയമേവ അടുത്ത പേജിലേക്ക് കൊണ്ടുപോകും.</p></div>
+    <div id="as" class="lang-content hidden"><p class="font-2 color-blue-dark">আপোনালোকে আমাৰ লগত যোগদান কৰা দেখি আমি অতিশয় আনন্দিত হৈছো! <br>
+আৰম্ভ কৰাৰ আগতে,<br>
+আপুনি প্ৰথমে এটা পঞ্জীয়ন মাচুল দিব লাগিব।<br> নিশ্চিত কৰক যে আপোনাৰ মোবাইল ৱালেটত পৰ্যাপ্ত ধন সাজু আছে<br> — যেনে PhonePe, Google Pay, Paytm, UPI, বা অন্যান্য।<br>
+পঞ্জীয়নৰ প্ৰথম পৃষ্ঠাত আপুনি কোম্পানী একাউণ্ট নম্বৰ দেখিব, তাত পেমেণ্ট<br> কৰি পৰৱৰ্তী পৃষ্ঠালৈ যাব। <br> আপুনি কোম্পানী একাউণ্টলৈ পেমেণ্ট কৰা বুলি প্ৰমাণ কৰিবলৈ আপুনি এটা স্পষ্ট স্ক্ৰীণশ্বট আপলোড কৰিবলৈ কোৱা হ'ব<br>
+আপোনাৰ পঞ্জীয়ন মাচুল পৰিশোধ সম্পূৰ্ণ হোৱা কোম্পানী একাউণ্টৰ এটা স্ক্ৰীণশ্বট আপল'ড কৰক <br>
+আপোনাৰ পেমেণ্ট নিশ্চিত হ'লে,<br> আপুনি স্বয়ংক্ৰিয়ভাৱে পৰৱৰ্তী পৃষ্ঠালৈ লৈ যোৱা হ'ব যাতে আপোনাৰ সবিশেষৰ সৈতে আপোনাৰ বাকী পঞ্জীয়ন সম্পূৰ্ণ কৰিব পাৰে।</p></div>
+    <div id="pa" class="lang-content hidden"><p class="font-2 color-blue-dark">ਸਾਨੂੰ ਤੁਹਾਨੂੰ ਸਾਡੇ ਨਾਲ ਜੁੜਦੇ ਦੇਖ ਕੇ ਬਹੁਤ ਖੁਸ਼ੀ ਹੋ ਰਹੀ ਹੈ! <br>
+ਸ਼ੁਰੂ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ, <br>
+ਤੁਹਾਨੂੰ ਪਹਿਲਾਂ ਇੱਕ ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਫੀਸ ਦਾ ਭੁਗਤਾਨ ਕਰਨਾ ਪਵੇਗਾ।<br> ਇਹ ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਤੁਹਾਡੇ ਮੋਬਾਈਲ ਵਾਲਿਟ ਵਿੱਚ ਕਾਫ਼ੀ ਫੰਡ ਤਿਆਰ ਹਨ<br> — ਜਿਵੇਂ ਕਿ PhonePe, Google Pay, Paytm, UPI, ਜਾਂ ਹੋਰ।<br>
+ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਦੇ ਪਹਿਲੇ ਪੰਨੇ 'ਤੇ, ਤੁਸੀਂ ਕੰਪਨੀ ਦਾ ਖਾਤਾ ਨੰਬਰ ਵੇਖੋਗੇ, ਉੱਥੇ ਭੁਗਤਾਨ ਕਰੋ<br> ਅਤੇ ਅਗਲੇ ਪੰਨੇ 'ਤੇ ਜਾਓ। <br> ਤੁਹਾਨੂੰ ਇਹ ਸਾਬਤ ਕਰਨ ਲਈ ਇੱਕ ਸਪਸ਼ਟ ਸਕ੍ਰੀਨਸ਼ੌਟ ਅਪਲੋਡ ਕਰਨ ਲਈ ਕਿਹਾ ਜਾਵੇਗਾ ਕਿ ਤੁਸੀਂ ਕੰਪਨੀ ਦੇ ਖਾਤੇ ਵਿੱਚ ਭੁਗਤਾਨ ਕੀਤਾ ਹੈ<br>
+ਕੰਪਨੀ ਦੇ ਖਾਤੇ ਦਾ ਇੱਕ ਸਕ੍ਰੀਨਸ਼ੌਟ ਅਪਲੋਡ ਕਰੋ ਜਿੱਥੇ ਤੁਹਾਡੀ ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਫੀਸ ਦਾ ਭੁਗਤਾਨ ਪੂਰਾ ਹੋ ਗਿਆ ਹੈ <br>
+ਇੱਕ ਵਾਰ ਤੁਹਾਡੀ ਅਦਾਇਗੀ ਦੀ ਪੁਸ਼ਟੀ ਹੋ ​​ਜਾਣ ਤੋਂ ਬਾਅਦ,<br> ਤੁਹਾਨੂੰ ਆਪਣੇ ਵੇਰਵਿਆਂ ਨਾਲ ਆਪਣੀ ਬਾਕੀ ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਆਪਣੇ ਆਪ ਅਗਲੇ ਪੰਨੇ 'ਤੇ ਲੈ ਜਾਇਆ ਜਾਵੇਗਾ।</p></div>
+  </div>
+
+       
+                </div>
+                <a href="#" class="btn btn-3d btn-m btn-full mb-n1 rounded-xl text-uppercase font-800 shadow-s border-blue-dark bg-blue-light"><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 20 20"><path fill="currentColor" d="M9.76 0C15.417 0 20 4.477 20 10S15.416 20 9.76 20c-3.191 0-6.142-1.437-8.07-3.846a.644.644 0 0 1 .115-.918a.68.68 0 0 1 .94.113a8.96 8.96 0 0 0 7.016 3.343c4.915 0 8.9-3.892 8.9-8.692s-3.985-8.692-8.9-8.692a8.96 8.96 0 0 0-6.944 3.255a.68.68 0 0 1-.942.101a.644.644 0 0 1-.103-.92C3.703 1.394 6.615 0 9.761 0m.545 6.862l2.707 2.707c.262.262.267.68.011.936L10.38 13.15a.66.66 0 0 1-.937-.011a.66.66 0 0 1-.01-.937l1.547-1.548l-10.31.001A.66.66 0 0 1 0 10c0-.361.3-.654.67-.654h10.268L9.38 7.787a.66.66 0 0 1-.01-.937a.66.66 0 0 1 .935.011"/></svg> Understand & Go to Register Page</a>
+           <br>
+            
+        
+            </div>
+        </div>
+        
+  
+                                       
+
+                    </div>
+                </div>
+                
+      
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const select = document.getElementById("languageSelect");
+      const allLangBlocks = document.querySelectorAll(".lang-content");
+
+      function showSelectedLanguage(langCode) {
+        allLangBlocks.forEach(div => {
+          div.classList.toggle("hidden", div.id !== langCode);
+        });
+        select.value = langCode;
+      }
+
+      // Always default to English on load
+      showSelectedLanguage("en");
+
+      // On change
+      select.addEventListener("change", function () {
+        showSelectedLanguage(this.value);
+      });
+    });
+  </script>
+
+
+         <div id="loginincorrect" 
+    class="menu menu-box-modal rounded-xl" 
+    data-menu-hide="1500"
+    data-menu-width="170"
+    data-menu-height="170">
+    <h1 class="text-center fa-4x mt-2 pt-3 pb-2"><i class="fa fa-times-circle color-red-light"></i></h1>
+    <h2 class="text-center color-red-light">Wrong Credentials!</h2>
+</div>
+
+    </div>
+    <div id="PasswordReset" 
+    class="menu menu-box-modal rounded-xl" 
+    data-menu-hide="1500"
+    data-menu-width="170"
+    data-menu-height="170">
+    <h1 class="text-center fa-4x mt-2 pt-3 pb-2"><i class="fa fa-times-circle color-red-light"></i></h1>
+    <h2 class="text-center color-red-light">unmatching!</h2>
+</div>
+    <!--------------->
+    <!--------------->
+    <!--Menu Forgot-->
+    <!--------------->
+    <!--------------->
+    <div id="menu-forgot" 
+    class="menu menu-box-modal rounded-x1" 
+         data-menu-height="220" 
+         data-menu-width="350">
+        <div class="menu-title">
+            <p class="color-highlight">Let's get you into your account</p>
+            <h1 class="font-24">Recover Password</h1>
+            <a href="#" class="close-menu"><i class="fa fa-times-circle"></i></a>
+        </div>
+
+        <div class="content mt-1">
+            <div class="input-style no-borders has-icon validate-field mb-4">
+                <i class="fa fa-user"></i>
+                <input type="name" class="form-control validate-name" id="form1ab" placeholder="Email">
+                <label for="form1ab" class="color-highlight font-11 font-500">Email</label>
+                <i class="fa fa-times disabled invalid color-red-dark"></i>
+                <i class="fa fa-check disabled valid color-green-dark"></i>
+                <em>(required)</em>
+            </div>
+                                <a href="#" class="btn btn-full btn-m shadow-l rounded-s bg-highlight font-600 mt-4"  data-menu="PasswordReset">SEND</a>
+        </div>
+    </div>     
+        
+    <div id="menu-main-modal" class="menu menu-box-modal rounded-0 rounded-m" data-menu-load="menulogin.html" data-menu-width="350"  data-menu-height="500" data-menu-active="nav-pages"></div>
+
+  
+
+
+</div>
+
+
+
+
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://himancallboyapp.neocities.org/HIMANApp/custom.js"></script>
+
+
+
+<script type="text/javascript" src="https://gigolocallboyplayboyapp.neocities.org/HiMAN_app_file/custom.js"></script>
+</body>
