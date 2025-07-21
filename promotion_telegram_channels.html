@@ -176,9 +176,8 @@
   background-image: url('https://zufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/images/walk.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center top;
-  animation: scrollBackground 8s ease-in-out infinite alternate,
-             scalePulse 6s ease-in-out infinite alternate;
+  background-position: center 0%;
+  animation: scrollY 16s ease-in-out infinite alternate;
   color: #fff;
   position: relative;
   z-index: 1;
@@ -189,7 +188,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* dark overlay for text visibility */
+  background: rgba(0, 0, 0, 0.4); /* dark overlay for readability */
   z-index: -1;
   border-radius: 16px;
 }
@@ -239,28 +238,20 @@
   }
 }
 
-/* Background scroll animation */
-@keyframes scrollBackground {
+/* 🔁 Infinite up/down background animation */
+@keyframes scrollY {
   0% {
-    background-position: center top;
+    background-position: center 0%;
+  }
+  50% {
+    background-position: center 100%;
   }
   100% {
-    background-position: center bottom;
-  }
-}
-
-/* Smooth scale pulse */
-@keyframes scalePulse {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.02);
+    background-position: center 0%;
   }
 }
 </style>
 
-                
 
 
     <script>
