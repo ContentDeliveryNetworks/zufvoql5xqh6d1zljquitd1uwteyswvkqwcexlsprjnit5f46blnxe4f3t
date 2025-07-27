@@ -85,14 +85,16 @@
       font-size: 1rem;
       border: none;
       border-radius: 12px;
+      background-color: grey;
+      color: red;
+      cursor: not-allowed;
+      transition: all 0.3s ease;
+    }
+
+    button.enabled {
       background-color: dodgerblue;
       color: #fff;
       cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #1e90ff;
     }
 
     @media screen and (max-width: 480px) {
@@ -113,8 +115,8 @@
 
   <div class="container">
     <h1>Select Language</h1>
-    <select id="language">
-      <option value="">-- Choose --</option>
+    <select id="languageSelect">
+      <option value="">-- Select Language --</option>
       <option value="en">English</option>
       <option value="bn">বাংলা</option>
       <option value="hi">हिन्दी</option>
@@ -126,12 +128,17 @@
   </div>
 
   <script>
-    const languageSelect = document.getElementById('language');
+    const languageSelect = document.getElementById('languageSelect');
     const continueBtn = document.getElementById('continueBtn');
 
     languageSelect.addEventListener('change', () => {
-      const selected = languageSelect.value;
-      continueBtn.disabled = !selected;
+      if (languageSelect.value !== "") {
+        continueBtn.disabled = false;
+        continueBtn.classList.add('enabled');
+      } else {
+        continueBtn.disabled = true;
+        continueBtn.classList.remove('enabled');
+      }
     });
 
     continueBtn.addEventListener('click', () => {
