@@ -95,50 +95,64 @@
       <option value="as">অসমীয়া</option>
     </select>
     <center><p>You can change the language later by clicking the menu on the right and selecting your preferred language</p></center>
-    <button id="continueBtn" disabled>Continue</button>
+    <button id="continueBtn" disabled>Proceed!</button>
   </div>
 
   <script>
-    const languageSelect = document.getElementById('languageSelect');
-    const continueBtn = document.getElementById('continueBtn');
+  const languageSelect = document.getElementById('languageSelect');
+  const continueBtn = document.getElementById('continueBtn');
 
-    const languageUrls = {
-      en: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/Welcome",
-      hi: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeHindi",
-      bn: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeBangla",
-  te: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomTelugu",
+  const languageUrls = {
+    en: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/Welcome",
+    hi: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeHindi",
+    bn: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeBangla",
+    te: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomTelugu",
     gu: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeTamil",
-      ur: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeUrdu",
-        kn: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeKannada",
-          or: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeOdia",
-            ml: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeMalayalam",
-              pa: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomePunjabi",
-        as: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeAssamese",
-      mr: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeMarathi"
-    };
+    ur: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeUrdu",
+    kn: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeKannada",
+    or: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeOdia",
+    ml: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeMalayalam",
+    pa: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomePunjabi",
+    as: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeAssamese",
+    mr: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeMarathi"
+  };
 
-    languageSelect.addEventListener('change', () => {
-      if (languageSelect.value) {
-        continueBtn.disabled = false;
-        continueBtn.classList.add('enabled');
-      } else {
-        continueBtn.disabled = true;
-        continueBtn.classList.remove('enabled');
-      }
-    });
+  // Auto-redirect immediately if returning user
+  const savedLang = localStorage.getItem('preferredLanguage');
+  if (savedLang && languageUrls[savedLang]) {
+    window.location.href = languageUrls[savedLang]; // No delay for future visits
+  }
 
-    continueBtn.addEventListener('click', () => {
-      const selected = languageSelect.value;
-      if (!selected) return;
+  // Enable/disable continue button
+  languageSelect.addEventListener('change', () => {
+    if (languageSelect.value) {
+      continueBtn.disabled = false;
+      continueBtn.classList.add('enabled');
+    } else {
+      continueBtn.disabled = true;
+      continueBtn.classList.remove('enabled');
+    }
+  });
 
-      if(languageUrls[selected]) {
-        window.location.href = languageUrls[selected];
-      } else {
-        // Capitalize first letter of language code and redirect to fallback URL
-        const capLang = selected.charAt(0).toUpperCase() + selected.slice(1);
-        window.location.href = `https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/Welcome${capLang}`;
-      }
-    });
-  </script>
+  // First-time redirect with delay
+  continueBtn.addEventListener('click', () => {
+    const selected = languageSelect.value;
+    if (!selected) return;
+
+    // Save preference
+    localStorage.setItem('preferredLanguage', selected);
+
+    // Redirect after short delay (e.g., 1500ms)
+    const url = languageUrls[selected] || `https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/Welcome${selected.charAt(0).toUpperCase() + selected.slice(1)}`;
+    
+    continueBtn.innerText = "Loading..";
+    continueBtn.disabled = true;
+
+    setTimeout(() => {
+      window.location.href = url;
+    }, 1500); // 1.5 seconds delay
+  });
+</script>
+
 </body>
 </html>
