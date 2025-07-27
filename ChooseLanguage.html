@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select Language</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&w=800&q=80') repeat;
+      background-size: cover;
+      animation: scrollBg 60s linear infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+      backdrop-filter: blur(3px);
+    }
+
+    @keyframes scrollBg {
+      0% { background-position: 0 0; }
+      100% { background-position: 0 1000px; }
+    }
+
+    select, button {
+      width: 100%;
+      max-width: 320px;
+      font-size: 16px;
+      border-radius: 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    select {
+      padding: 14px 16px;
+      border: 1px solid #ccc;
+      background-color: white;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 14px 24px;
+      border: none;
+      background-color: dodgerblue;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:disabled {
+      background-color: #a0c8f5;
+      cursor: not-allowed;
+    }
+
+    .alert, .promo-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.8);
+      background-color: white;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      width: 85%;
+      max-width: 300px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      z-index: 9999;
+    }
+
+    .alert.show, .promo-popup.show {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+      pointer-events: auto;
+    }
+
+    .alert-title {
+      font-weight: 600;
+      font-size: 17px;
+      margin-bottom: 12px;
+      color: #333;
+    }
+
+    .alert-btn, .promo-close {
+      margin-top: 15px;
+      padding: 10px 22px;
+      background-color: dodgerblue;
+      border: none;
+      border-radius: 12px;
+      color: white;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .promo-title {
+      font-size: 18px;
+      color: red;
+      font-weight: bold;
+    }
+
+    .divider {
+      border-top: 1px solid #ccc;
+      margin: 15px 0;
+    }
+
+    .promo-points {
+      text-align: left;
+      padding: 0 10px;
+    }
+
+    .promo-points li {
+      margin: 8px 0;
+      font-size: 15px;
+      list-style: none;
+    }
+
+    .promo-points li::before {
+      content: "👉 ";
+      margin-right: 5px;
+      color: #007aff;
+    }
+
+    @media (max-width: 500px) {
+      select, button {
+        font-size: 15px;
+      }
+      .promo-title {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Language Dropdown -->
+  <select id="languageSelect">
+    <option value="">🌐 Select Language</option>
+    <option value="en">English</option>
+    <option value="bn">বাংলা</option>
+    <option value="hi">हिंदी</option>
+    <option value="es">Español</option>
+  </select>
+
+  <!-- Continue Button -->
+  <button id="continueBtn">Continue</button>
+
+  <!-- Alert for No Selection -->
+  <div class="alert" id="alertBox">
+    <div class="alert-title">⚠️ Please choose a language first</div>
+    <button class="alert-btn" onclick="hideAlert()">OK</button>
+  </div>
+
+
+
+  <script>
+    const languageSelect = document.getElementById('languageSelect');
+    const continueBtn = document.getElementById('continueBtn');
+    const alertBox = document.getElementById('alertBox');
+    const promoPopup = document.getElementById('promoPopup');
+
+    continueBtn.disabled = true;
+
+    languageSelect.addEventListener('change', () => {
+      continueBtn.disabled = languageSelect.value === "";
+    });
+
+    continueBtn.addEventListener('click', () => {
+      const lang = languageSelect.value;
+      if (!lang) {
+        showAlert();
+      } else {
+        // Redirect based on selected language
+        const pages = {
+          en: 'english.html',
+          bn: 'bangla.html',
+          hi: 'hindi.html',
+          es: 'spanish.html'
+        };
+        window.location.href = pages[lang] || '#';
+      }
+    });
+
+    function showAlert() {
+      alertBox.classList.add('show');
+    }
+
+    function hideAlert() {
+      alertBox.classList.remove('show');
+    }
+
+    // Now acts as a temporary close only
+    function closePromo() {
+      promoPopup.classList.remove('show');
+    }
+
+    window.onload = () => {
+      // Always show popup on reload
+      promoPopup.classList.add('show');
+    };
+  </script>
+
+</body>
+</html>
