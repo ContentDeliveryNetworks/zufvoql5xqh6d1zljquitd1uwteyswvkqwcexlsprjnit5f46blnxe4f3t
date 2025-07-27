@@ -3,127 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Language Selector</title>
+  <title>Select Language</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-      color: #fff;
+      margin: 0; padding: 0; height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
       overflow: hidden;
     }
-
-    .background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 200%;
-      background-image: url('https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/images/walk.jpg');
+    body {
+      display: flex; justify-content: center; align-items: center;
+      background: black;
+    }
+    .bg-scroll {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 200%;
+      background: url('https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/images/walk.jpg') no-repeat center;
       background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center top;
       filter: grayscale(100%) opacity(0.7);
-      z-index: -2;
-      animation: scrollBackground 40s linear infinite;
-    }
-
-    @keyframes scrollBackground {
-      0% {
-        transform: translateY(0%);
-      }
-      100% {
-        transform: translateY(-50%);
-      }
-    }
-
-    .overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.3);
       z-index: -1;
+      animation: scrollUp 60s linear infinite;
     }
-
+    @keyframes scrollUp {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-50%); }
+    }
     .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      padding: 20px;
-      text-align: center;
+      background: rgba(255,255,255,0.85);
+      border-radius: 12px;
+      padding: 25px 5vw;
       max-width: 400px;
-      margin: auto;
+      width: 90%;
+      text-align: center;
+      box-sizing: border-box;
     }
-
     h1 {
-      font-size: 2rem;
+      font-size: 1.8rem;
       margin-bottom: 20px;
-      color: white;
-      text-shadow: 1px 1px 3px #000;
     }
-
     select {
-      padding: 12px 16px;
-      font-size: 1rem;
-      border-radius: 12px;
-      border: none;
-      outline: none;
-      background: rgba(255, 255, 255, 0.9);
-      color: #000;
       width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
       margin-bottom: 20px;
     }
-
     button {
-      padding: 12px 24px;
+      width: 100%;
+      padding: 12px;
       font-size: 1rem;
       border: none;
-      border-radius: 12px;
-      background-color: grey;
-      color: red;
+      border-radius: 8px;
+      color: white;
       cursor: not-allowed;
-      transition: all 0.3s ease;
+      background-color: red;
+      transition: background-color 0.3s;
     }
-
     button.enabled {
       background-color: dodgerblue;
-      color: #fff;
       cursor: pointer;
     }
-
-    @media screen and (max-width: 480px) {
+    @media (max-width: 480px) {
       h1 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
       }
-
-      select,
-      button {
-        font-size: 1rem;
+      select, button {
+        font-size: 0.95rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="background"></div>
-  <div class="overlay"></div>
+  <div class="bg-scroll"></div>
 
   <div class="container">
-    <h1>Select Language</h1>
+    <h1>🌐 Select Your Language</h1>
     <select id="languageSelect">
-      <option value="">-- Select Language --</option>
+      <option value="">-- Please choose --</option>
       <option value="en">English</option>
-      <option value="bn">বাংলা</option>
       <option value="hi">हिन्दी</option>
-      <option value="ta">தமிழ்</option>
+      <option value="bn">বাংলা</option>
+      <option value="mr">मराठी</option>
       <option value="te">తెలుగు</option>
+      <option value="ta">தமிழ்</option>
+      <option value="gu">ગુજરાતી</option>
+      <option value="ur">اردو</option>
+      <option value="kn">ಕನ್ನಡ</option>
+      <option value="or">ଓଡିଆ</option>
       <option value="ml">മലയാളം</option>
+      <option value="pa">ਪੰਜਾਬੀ</option>
+      <option value="as">অসমীয়া</option>
     </select>
+    <center><p>You can change the language later by clicking the menu on the right and selecting your preferred language</p></center>
     <button id="continueBtn" disabled>Continue</button>
   </div>
 
@@ -131,8 +102,23 @@
     const languageSelect = document.getElementById('languageSelect');
     const continueBtn = document.getElementById('continueBtn');
 
+    const languageUrls = {
+      en: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/Welcome",
+      hi: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeHindi",
+      bn: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeBangla",
+  te: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomTelugu",
+    gu: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeTamil",
+      ur: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeUrdu",
+        kn: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeKannada",
+          or: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeOdia",
+            ml: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeMalayalam",
+              pa: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomePunjabi",
+        as: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeAssamese",
+      mr: "https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/WelcomeMarathi"
+    };
+
     languageSelect.addEventListener('change', () => {
-      if (languageSelect.value !== "") {
+      if (languageSelect.value) {
         continueBtn.disabled = false;
         continueBtn.classList.add('enabled');
       } else {
@@ -142,19 +128,16 @@
     });
 
     continueBtn.addEventListener('click', () => {
-      const lang = languageSelect.value;
-      if (!lang) return;
+      const selected = languageSelect.value;
+      if (!selected) return;
 
-      const pages = {
-        en: 'english.html',
-        bn: 'bangla.html',
-        hi: 'hindi.html',
-        ta: 'tamil.html',
-        te: 'telugu.html',
-        ml: 'malayalam.html'
-      };
-
-      window.location.href = pages[lang] || '#';
+      if(languageUrls[selected]) {
+        window.location.href = languageUrls[selected];
+      } else {
+        // Capitalize first letter of language code and redirect to fallback URL
+        const capLang = selected.charAt(0).toUpperCase() + selected.slice(1);
+        window.location.href = `https://yufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/Welcome${capLang}`;
+      }
     });
   </script>
 </body>
